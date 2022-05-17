@@ -1,8 +1,6 @@
 package atos.upgrade.serviceproduct.entities;
 
-import lombok.Data;
-import lombok.Getter;
-import lombok.Setter;
+import lombok.*;
 
 import javax.persistence.*;
 
@@ -10,7 +8,10 @@ import javax.persistence.*;
 @Table(name = "tbl_categories")
 @Getter
 @Setter
-@Data
+@ToString
+@NoArgsConstructor
+@AllArgsConstructor
+@Builder
 public class Category {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
