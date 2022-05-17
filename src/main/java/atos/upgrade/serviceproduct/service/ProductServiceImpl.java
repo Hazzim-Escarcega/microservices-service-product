@@ -3,14 +3,15 @@ package atos.upgrade.serviceproduct.service;
 import atos.upgrade.serviceproduct.entities.Category;
 import atos.upgrade.serviceproduct.entities.Product;
 import atos.upgrade.serviceproduct.repository.ProductRepository;
+import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 
 import java.util.List;
-
+@RequiredArgsConstructor
 public class ProductServiceImpl implements ProductService {
 
-    @Autowired
-    private ProductRepository productRepository;
+
+    private final ProductRepository productRepository;
 
     @Override
     public List<Product> listAll() {
