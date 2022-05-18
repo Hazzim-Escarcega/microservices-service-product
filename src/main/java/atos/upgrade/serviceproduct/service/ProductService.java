@@ -6,7 +6,7 @@ import atos.upgrade.serviceproduct.entities.Product;
 import java.util.List;
 
 public interface ProductService {
-    List<Product> listAll();
+    List<Product> listAllProduct();
     Product getProduct(Long id);
     Product createProduct(Product product);
     Product updateProduct(Product product);

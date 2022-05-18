@@ -5,16 +5,19 @@ import atos.upgrade.serviceproduct.entities.Product;
 import atos.upgrade.serviceproduct.repository.ProductRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import java.util.List;
+
+@Service
 @RequiredArgsConstructor
 public class ProductServiceImpl implements ProductService {
 
-
+    @Autowired
     private final ProductRepository productRepository;
 
     @Override
-    public List<Product> listAll() {
+    public List<Product> listAllProduct() {
         return productRepository.findAll();
     }
 
